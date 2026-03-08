@@ -1,0 +1,221 @@
+%!TEX program = pdflatex
+\documentclass[11pt,letterpaper]{article}
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0, 51, 102}
+\definecolor{lightgray}{RGB}{100, 100, 100}
+
+% Font setup (using default LaTeX fonts)
+\renewcommand{\familydefault}{\sfdefault}
+
+% Hyperlink setup
+\hypersetup{colorlinks=true, linkcolor=darkblue, urlcolor=darkblue}
+
+% Section formatting
+\newcommand{\SectionHeading}[1]{%
+  \vspace{0.3cm}
+  {\large\bfseries\color{darkblue}#1}
+  \vspace{0.1cm}
+  \hrule
+  \vspace{0.2cm}
+}
+
+\newcommand{\SubsectionHeading}[1]{%
+  \vspace{0.15cm}
+  {\bfseries\color{darkblue}#1}
+}
+
+\newcommand{\RoleHeading}[4]{%
+  {\bfseries#1} \hfill {\itshape#2}\\
+  {\itshape#3} \hfill #4
+}
+
+% Job entry environment
+\newenvironment{jobenvironment}[4]{%
+  \needspace{2cm}
+  \vspace{0.15cm}
+  \RoleHeading{#1}{#2}{#3}{#4}
+  \vspace{0.05cm}
+  \begin{itemize}[leftmargin=0.2in, itemsep=0.05cm, parsep=0cm]
+}{%
+  \end{itemize}
+}
+
+\begin{document}
+
+% ============================================================================
+% HEADER
+% ============================================================================
+
+\begin{center}
+  {\Large\bfseries Melvin Malabanan}
+
+  \vspace{0.1cm}
+  Farmington Hills, Michigan \,|\, \href{https://linkedin.com/in/mmalaban}{LinkedIn: mmalaban}
+
+  \vspace{0.05cm}
+  {\small Phone: +1 (706) 577 - 6827}
+\end{center}
+
+\vspace{0.2cm}
+
+% ============================================================================
+% PROFESSIONAL SUMMARY
+% ============================================================================
+
+\SectionHeading{Professional Summary}
+
+Senior Software Engineer with 14+ years of embedded systems and automotive software development experience. Demonstrated expertise in ASPICE-compliant embedded software engineering, AUTOSAR architecture design, safety-critical systems, and project management. Proven ability to lead cross-functional teams, design scalable software solutions, and mentor engineering staff. Bachelor of Science in Electrical Engineering with continuous professional development in software quality, cybersecurity, and emerging technologies.
+
+% ============================================================================
+% CORE COMPETENCIES
+% ============================================================================
+
+\SectionHeading{Core Competencies}
+
+\vspace{-0.3cm}
+\begin{itemize}[leftmargin=0.2in, itemsep=0.05cm, parsep=0cm]
+  \item \textbf{Software Engineering:} Full lifecycle embedded software development, system architecture design, requirements engineering, design methodologies, code review, quality assurance, software testing and validation
+  \item \textbf{Programming Languages:} C, C++, Python, C\#, and tool specific languages such as CAPL (sudo-C)
+  \item \textbf{Automotive Standards \& Processes:} AUTOSAR (diagnostic, communication, and memory stacks), ASPICE (Automotive SPICE), ISO 26262 (Functional Safety), ISO 14229 (Unified Diagnostic Services)
+  \item \textbf{Development Tools \& SW Framework:} AUTOSAR Configuration and Authoring tools (Vector DaVinci, ETAS ISOLAR, Elektrobit Tresos), Zephyr Project/RTOS, Eclipse eCAL, VS Code,  Lauterbach debugger, Network Analysis tools (Vector CANoe, Vector CANalyzer, Wireshark)
+  \item \textbf{Microcontroller Platforms:} Infineon Tricore (TC2xx/TC3xx), ST STM32, NXP S32K, Renesas RH850, TI TivaC
+  \item \textbf{Project \& Process Management:}Agile methodologies (Scrum), JIRA, Polarion and DOORS requirements management, team leadership, stakeholder engagement, technical documentation
+  \item \textbf{Cybersecurity \& Quality:} MICROSAR Cybersecurity, threat analysis, secure coding practices, static analysis (PCLint, Astrée), unit testing (Unity/Ceedling, GoogleTest)
+  \item \textbf{Data \& Systems:} Network protocols (CAN/LIN/Ethernet), distributed embedded systems/architectures, multicore optimization, performance analysis, embedded systems fundamentals
+\end{itemize}
+
+% ============================================================================
+% WORK EXPERIENCE
+% ============================================================================
+
+\SectionHeading{Work Experience}
+
+% IAV Inc.
+\begin{jobenvironment}
+  {IAV Inc. — Senior Software Engineer \& AI Mentor}
+  {May 2022 -- Present}
+  {Northville, Michigan, USA}
+  {Full-time}
+
+  % \item Orchestrated requirement gathering and analysis initiatives across multiple projects, ensuring precise alignment with client needs and product safety-critical goals in ASPICE-compliant environments
+  \item Let end-to-end requirements engineering for controller modules; such as Electronic Damper Control, Memory Seat Module, Battery Management System, and Gateway Control Module, translating customer specifications into structured software requirements in DOORS or Polarion and ensuring bidirectional traceability to design, code, and test artifacts under a minimum of APSICE Level 3 processes.
+
+  % \item Led software architecture design for complex embedded systems, demonstrating technical leadership in improving system efficiency and reliability for diverse automotive customer requirements
+  \item Designed and implemented layered embedded software architecture (MCAL, middleware, application) built in-house (IAVSAAR) for the NXP S32K (ARM Cortex-M), improving CPU utilization by approximately 20\%
+
+  \item Led the software architecture and integration of a multi-processor Software-Defined Vehicle (SDV) demonstration platform using NVIDIA Jetson for cloud connectivity and GUI, Renesas R-Car for application execution, and the IAV Dragoon ECU for vehicle interfacing, validating a scalable embedded software architecture across multiple hardware platforms and customer scenarios
+
+  \item Owned the implementation and testing safety-critical embedded software across mutliple projects, ensuring products met ISO 26262 compliance and functional safety standards through rigorous validation processes
+
+  \item Proactively engaged with clients to troubleshoot technical issues and review software requirements, building strong relationships and ensuring project success through persistent problem-solving
+  \item Led development of robust, scalable embedded software using ASPICE processes, maintaining high standards for requirements traceability, code quality, and testing rigor through individual initiative and team collaboration
+  \item Took ownership of device driver and middleware development for CAN, LIN, and Ethernet communication interfaces, completing complex technical tasks independently with attention to performance and reliability
+  \item Led comprehensive software requirement reviews with stakeholders, ensuring feasibility, alignment with design constraints, and clear documentation of acceptance criteria through determined collaboration
+  \item Promoted best practices, continuous improvement, and knowledge sharing while building team capability and professional development
+  \item Took initiative in developing comprehensive technical documentation and ISO compliance artifacts, ensuring project transparency, traceability, and knowledge continuity for long-term maintenance
+  \item Led participation in validation and unit testing initiatives, taking responsibility for test plan development, execution, and analysis to ensure reliable software delivery
+  \item Spearheaded AI adoption initiative across the organization, building a culture of confident AI tool usage and led comprehensive training programs through workshops and hands-on coaching all while adhering to the data protection policies put forth by the company
+  \item Maintained responsibility for keeping 50+ team members updated on AI trends and emerging technologies, achieving an 80\% adoption results through persistent engagement and mentorship
+\end{jobenvironment}
+
+% BorgWarner Inc. — Senior Software Engineer
+\begin{jobenvironment}
+  {BorgWarner Inc. — Senior Software Engineer}
+  {April 2017 -- May 2022}
+  {Auburn Hills, Michigan, USA}
+  {Full-time}
+
+  \item Owned AUTOSAR diagnostic stack and software modules across multiple projects, demonstrating technical leadership and accountability in electrification product development
+  \item Collaborated with System Engineering teams to identify and clarify diagnostics requirements, led the UDS (Unified Diagnostic Services), OBD, and fault management module design
+  \item Led software module design and optimization using AUTOSAR architecture, demonstrating proficiency in system configuration and multicore software optimization - leading to a 20\% efficiency in the overall performance of the multicore projects
+  \item Independently implemented and developed embedded software based on requirements specifications, completing complex technical challenges with persistence and attention to detail
+  \item Led comprehensive unit testing initiatives and diagnostic feature validation, taking responsibility for ensuring software met design specifications and quality criteria
+  \item Demonstrated technical leadership in managing diagnostic feature releases, ensuring deliverables met project schedules and customer expectations through determined project ownership
+  \item Took initiative in identifying software optimization opportunities (RAM/NVRAM utilization) to continuously improve platform software efficiency and embedded system performance
+  \item Provided technical mentoring and problem-solving support to project teams on AUTOSAR platform integration and embedded software development best practices
+  \item Collaborated with global development teams to support platform development, integration activities, and delivery of safety-critical automotive software solutions
+  \item Leading key competency topics and mentoring team members on AUTOSAR architecture, software quality, and software engineering methodologies
+\end{jobenvironment}
+
+% BorgWarner Inc. — Software Engineer II
+\begin{jobenvironment}
+  {BorgWarner Inc. — Software Engineer II}
+  {Nov. 2015 -- April 2017}
+  {Auburn Hills, Michigan, USA}
+  {Full-time}
+
+  \item Took initiative in determining customer requirements for embedded software development, demonstrating proactive problem-solving and stakeholder engagement
+  \item Led software integration efforts using AUTOSAR Basic Software with GM-specific platforms (SUM architecture) for all-wheel drive and transfer-case control modules
+  \item Demonstrated determination in ECU requirements engineering, design activities, testing, and release processes, ensuring quality and compliance in embedded software deliverables
+  \item Took responsibility for hardware design verification, independently ensuring schematic accuracy, circuit functionality, and hardware-software integration
+  \item Conducted embedded software testing using Vector CANoe, Lauterbach debuggers, and custom test harnesses to validate embedded system functionality
+\end{jobenvironment}
+
+% Vector North America Inc.
+\begin{jobenvironment}
+  {Vector North America Inc. — Embedded Software Engineer}
+  {June 2012 -- Nov. 2015}
+  {Novi, Michigan, USA}
+  {Full-time}
+
+  \item Led customer requirement analysis and CAN stack integration projects, taking ownership of embedded software solutions for automotive electronic control modules
+  \item Took point on overall project management and coordination, demonstrating leadership in managing resources, schedules, and technical deliverables for customer projects
+  \item Proactively troubleshot software issues and provided technical support for embedded software deployment at OEM and supplier production sites
+  \item Spearheaded customer relationship building through regular technical meetings and engagement, establishing positive long-term partnerships through persistent professional communication
+  \item Led collaboration with product developers and test engineers at OEMs and suppliers to ensure successful implementation and integration of embedded software solutions
+  \item Provided customer training and courseware development for embedded software systems, demonstrating technical communication and knowledge-transfer skills
+  \item Implemented embedded software components in C/C++, demonstrating proficiency with ECU development tools, automotive communication protocols, and system integration
+\end{jobenvironment}
+
+% Denso International America
+\begin{jobenvironment}
+  {Denso International America — Electronics Engineer}
+  {Sept. 2011 -- June 2012}
+  {Southfield, Michigan, USA}
+  {Full-time}
+
+  \item Reviewed customer requirements, engineering specifications, and design changes for automotive memory seat module development projects
+  \item Conducted comprehensive testing initiatives and analysis of design verification data from vehicle validation and ECU testing activities
+  \item Demonstrated initiative in benchmarking activities and competitive analysis, contributing valuable technical insights through determined research
+  \item Took responsibility for creating technical reports and presentations, ensuring clear communication of findings, test results, and engineering recommendations to stakeholders
+\end{jobenvironment}
+
+% ============================================================================
+% EDUCATION
+% ============================================================================
+
+\SectionHeading{Education}
+
+\SubsectionHeading{Bachelor of Science, Electrical Engineering}
+University of Michigan -- Dearborn, Michigan \hfill 2008--2011
+
+\SubsectionHeading{Associate Degree, Engineering}
+Schoolcraft College, Livonia, Michigan \hfill 2007--2008
+
+\vspace{0.15cm}
+
+\SubsectionHeading{Professional Certifications \& Training}
+\begin{itemize}[leftmargin=0.2in, itemsep=0.05cm, parsep=0cm]
+  \item Certified ScrumMaster (Scrum Alliance, 2019)
+  \item Functional Safety Training in Automotive -- ISO 26262 (UL, 2019)
+  \item MICROSAR Cybersecurity Advance Course (Vector Informatik, 2021)
+  \item MICROSAR Multi-core Advance Course (Vector Informatik, 2021)
+  \item Tiny Machine Learning Professional Certificate (Harvard University, 2023)
+  \item Applied Tiny Machine Learning Professional Certificate (Harvard University, 2023)
+  \item Requirements Writing (UNSW Sydney, Coursera, 2025)
+  \item Battery Management Systems Introduction (University of Colorado Boulder, Coursera, 2025)
+\end{itemize}
+
+\end{document}
